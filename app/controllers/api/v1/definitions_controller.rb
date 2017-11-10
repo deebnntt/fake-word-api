@@ -12,6 +12,8 @@ class Api::V1::DefinitionsController < ApplicationController
 
   def create
     @definition = Definition.create(word_id: params[:word_id], user_id: params[:user_id], part_of_speech: params[:part_of_speech], definition_text: params[:definition_text], sentence: params[:sentence])
+
+    render json: @definition
   end
 
   private
