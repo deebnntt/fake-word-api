@@ -6,7 +6,8 @@ class Api::V1::DefinitionsController < ApplicationController
   end
 
   def show
-    @definition = Definition.find_by(id: id)
+    @definition = Definition.find(params[:id])
+
     render json: @definition
   end
 
