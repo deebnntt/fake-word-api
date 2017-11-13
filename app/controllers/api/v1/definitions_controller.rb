@@ -17,6 +17,14 @@ class Api::V1::DefinitionsController < ApplicationController
     render json: @definition
   end
 
+  def update
+    @definition = Definition.find(params[:id])
+    @definition.increment!(:likes)
+    @definition.save
+
+    render json: @definition
+  end
+
   private
 
   def permitted_params

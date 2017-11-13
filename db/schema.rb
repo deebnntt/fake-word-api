@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171111222059) do
+ActiveRecord::Schema.define(version: 20171113143511) do
 
   create_table "definitions", force: :cascade do |t|
     t.integer "word_id"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20171111222059) do
     t.string "part_of_speech"
     t.text "definition_text"
     t.text "sentence"
-    t.integer "likes"
+    t.integer "likes", default: 0
   end
 
   create_table "users", force: :cascade do |t|
