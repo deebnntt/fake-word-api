@@ -25,6 +25,11 @@ class Api::V1::DefinitionsController < ApplicationController
     render json: @definition
   end
 
+  def destroy
+    @definition = Definition.find(params[:id])
+    @definition.destroy
+  end
+
   private
 
   def permitted_params

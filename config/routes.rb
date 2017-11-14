@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
   namespace :v1 do
-    resources :words, only: [:index]
-    resources :definitions, only: [:index, :show, :create, :update]
+    resources :words, only: [:index, :show]
+    resources :definitions, only: [:index, :show, :create, :update, :destroy]
   end
 end
 

@@ -5,4 +5,9 @@ class Api::V1::WordsController < ApplicationController
     render json: @words
   end
 
+  def show
+    @word = Word.find(params[:id])
+
+    render json: @word
+  end
 end
